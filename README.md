@@ -34,3 +34,7 @@ API REST desenvolvida em **Spring Boot** aplicando **POO** (domínio rico, SOLID
 
 
 ## Alteração de Readme.MD
+
+## Outras Informações
+
+- **Valid Informations needs to be here**
