@@ -38,3 +38,4 @@ API REST desenvolvida em **Spring Boot** aplicando **POO** (domínio rico, SOLID
 ## Other Informations
 
 - **New informations needs to be here**
+- Teste YOLO
