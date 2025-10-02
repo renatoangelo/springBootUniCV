@@ -16,10 +16,10 @@ import lombok.Setter;
 
 @Data
 @Entity
-@Table(name = "usuarios")
+@Table(name = "medicos")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Usuario {
+public class Medico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,18 +29,9 @@ public class Usuario {
     private String nome;
 
     @Column(nullable = false, unique = true)
-    private String cpf;
+    private String crm;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String senha;
-
-    @Column(nullable = false)
-    private LocalDate dataNascimento;
-
-    @Column(nullable = false)
-    private String telefone;
+    @OneToMany(mappedBy = "id_especialidade", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Especialidades> especialidadeId;
 }
 
