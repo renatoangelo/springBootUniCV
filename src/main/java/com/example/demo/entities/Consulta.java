@@ -1,4 +1,4 @@
-package com.example.demo.Entities;
+package com.example.demo.entities;
 
 import com.example.demo.service.StatusConsulta;
 import jakarta.persistence.*;
@@ -21,9 +21,9 @@ public class Consulta {
     @Column(name="id_consulta")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_paciente", nullable = false)
-    private Paciente pacienteId;
+    private Paciente pacienteId;*/
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_medico", nullable = false)

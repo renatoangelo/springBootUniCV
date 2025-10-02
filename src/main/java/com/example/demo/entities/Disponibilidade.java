@@ -1,8 +1,6 @@
-package com.example.demo.Entities;
+package com.example.demo.entities;
 
 import java.time.LocalTime;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,16 +18,16 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-@Table(name = "disponibilidade")
+@Table(name = "disponibilidades")
 public class Disponibilidade {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id_dis")
+	@Column(name="id_disponibilidade")
 	private Long id;
 	
 	@ManyToOne
-    @JoinColumn(name = "medico_id", nullable = false)
+    @JoinColumn(name = "id_medico", nullable = false)
 	private Medico medico;
 	
 	@Column(name="diaSemana", nullable = false, length = 13)
